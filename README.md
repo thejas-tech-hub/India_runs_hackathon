@@ -222,6 +222,6 @@ pytest test_integrity_filter.py test_hireability_evaluator.py \
 | Member | Role |
 |--------|------|
 | **THEJAS J** | Team Leader, AI/ML Engineer & System Architect |
-| **Veekshith** | Backend & Infrastructure Engineer |
+| **Abhishek** | Backend & Infrastructure Engineer |
 | **Raghavendra** | Data Engineering & Validation Engineer |
 | **Abhijit** | Research & Quality Assurance Engineer |
