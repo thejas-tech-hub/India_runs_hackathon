@@ -7,7 +7,7 @@ team_name: "AlgoRhythms"
 team_members:
   - name: "THEJAS J"
     role: "AI/ML Engineer & System Architect — Led the project, designed the end-to-end ranking pipeline, integrated the retrieval, ranking, reasoning, and validation stages, coordinated development, testing, optimization, and final submission."
-  - name: "Veekshith"
+  - name: "Abhishek"
     role: "Backend & Infrastructure Engineer — Assisted with backend implementation, pipeline integration, repository management, and deployment support."
   - name: "Abhijith"
     role: "Research & Quality Assurance Engineer — Assisted with experimentation, documentation, testing, and presentation preparation while validating outputs and overall system quality."
