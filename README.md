@@ -1,7 +1,12 @@
 # INDIA.RUNS Data & AI Challenge — Candidate Ranking Pipeline
 
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![CPU Only](https://img.shields.io/badge/Compute-CPU%20Only-00897B?style=for-the-badge&logo=intel&logoColor=white)
+![Runtime](https://img.shields.io/badge/Runtime-~254s-FF6F00?style=for-the-badge&logo=clockify&logoColor=white)
+![Tests](https://img.shields.io/badge/Tests-282%2F282%20Passed-4CAF50?style=for-the-badge&logo=pytest&logoColor=white)
+![Submission](https://img.shields.io/badge/Submission-Ready-8E24AA?style=for-the-badge&logo=checkmarx&logoColor=white)
+
 **Team:** AlgoRhythms  
-**Student:** THEJAS J  
 **Challenge:** INDIA.RUNS (Redrob) Data & AI Hackathon
 
 ---
@@ -11,6 +16,20 @@
 An end-to-end, CPU-only candidate ranking pipeline that ingests **100,000 candidate profiles** and a Job Description, then produces a ranked shortlist of the **Top 100 candidates** with LLM-generated justifications for the Top 10.
 
 The pipeline runs **entirely offline** — no external APIs, no GPU, no internet access at runtime.
+
+---
+
+## Features
+
+- **Honeypot Detection** — Multi-signal integrity filter catches ~9.2% synthetic/adversarial candidates before they enter scoring
+- **Hybrid Retrieval** — BM25 lexical search + dense embeddings (all-MiniLM-L6-v2) fused via Reciprocal Rank Fusion for robust recall
+- **Cross-Encoder Re-ranking** — ms-marco-MiniLM-L-6-v2 provides deep semantic relevance scoring on the shortlist
+- **Behavioral Intelligence** — Availability, Evidence Coverage, and Risk scores derived from career structure and profile completeness
+- **Weighted Fusion** — Transparent composite formula combines semantic and behavioral signals into a single final score
+- **LLM-Powered Justifications** — Phi-3-mini (Q4, CPU-only) generates structured, recruiter-ready explanations with GBNF grammar enforcement
+- **Fully Offline** — Zero network calls, zero API keys, zero GPU — runs entirely on a standard CPU laptop
+- **Reproducible** — Single command produces the identical `submission.csv` every time
+- **Extensively Tested** — 282 unit tests covering all 5 pipeline stages
 
 ---
 
@@ -150,6 +169,21 @@ python submission_exporter.py --input final_report.json --output submission.csv
 
 ---
 
+## Results
+
+| Metric | Value |
+|--------|-------|
+| Total candidates ingested | 100,000 |
+| Honeypots detected & filtered | 9,231 (9.2%) |
+| Clean candidates evaluated | 90,769 |
+| Top K retrieved (Stage 1) | 500 |
+| Top N ranked (Stage 2) | 100 |
+| Top N explained (Stage 3) | 10 |
+| Total pipeline runtime | ~254 seconds |
+| Unit tests | **282 / 282 passed** |
+
+---
+
 ## Key Technical Details
 
 - **Honeypot Detection**: Identifies ~9.2% synthetic candidates using multi-check integrity analysis
@@ -168,3 +202,26 @@ pytest test_integrity_filter.py test_hireability_evaluator.py \
        test_hybrid_retriever.py test_final_ranker.py \
        test_reasoning_engine.py -v
 ```
+
+---
+
+## Future Work
+
+- **Multi-threaded reasoning** — Parallelize LLM justification generation across CPU cores to reduce Stage 3 latency
+- **Confidence estimation** — Attach calibrated confidence intervals to final scores for downstream decision support
+- **Multi-job ranking** — Extend the pipeline to rank candidates against multiple JDs simultaneously with shared embeddings
+- **Incremental embedding updates** — Cache and incrementally update dense embeddings as new candidates arrive instead of full recomputation
+- **Distributed execution** — Shard candidate processing across multiple machines for datasets beyond 100K
+
+---
+
+## Team
+
+### AlgoRhythms
+
+| Member | Role |
+|--------|------|
+| **THEJAS J** | Team Leader, AI/ML Engineer & System Architect |
+| **Veekshith** | Backend & Infrastructure Engineer |
+| **Raghavendra** | Data Engineering & Validation Engineer |
+| **Abhijit** | Research & Quality Assurance Engineer |
