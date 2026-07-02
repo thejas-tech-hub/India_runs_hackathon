@@ -1,0 +1,861 @@
+{
+  "metadata": {
+    "team": "AlgoRhythms",
+    "student": "THEJAS J",
+    "challenge": "INDIA.RUNS Data & AI Challenge",
+    "generated_at": "2026-06-27T04:57:39.697876+00:00",
+    "jd_file": "jd.txt",
+    "candidates_file": "candidates.jsonl",
+    "total_pipeline_duration_seconds": 254.002
+  },
+  "stage_telemetry": {
+    "stage_0a_integrity_filter": {
+      "run_timestamp": "2026-06-27T10:23:25+0530",
+      "duration_seconds": 4.025,
+      "total_candidates": 100000,
+      "honeypots_detected": 9231,
+      "clean_passed": 90769,
+      "warnings_emitted": 0,
+      "honeypot_rate": 0.09231,
+      "warning_rate": 0.0,
+      "date_parse_errors": 0,
+      "malformed_records": 0,
+      "check_stats": {
+        "experience_vs_education": {
+          "candidates_evaluated": 0,
+          "candidates_skipped": 100000,
+          "flags_raised": 0,
+          "warnings_raised": 0
+        },
+        "skill_duration": {
+          "candidates_evaluated": 100000,
+          "candidates_skipped": 0,
+          "flags_raised": 16391,
+          "warnings_raised": 0
+        },
+        "future_dates": {
+          "candidates_evaluated": 100000,
+          "candidates_skipped": 0,
+          "flags_raised": 0,
+          "warnings_raised": 0
+        },
+        "career_consistency": {
+          "candidates_evaluated": 100000,
+          "candidates_skipped": 0,
+          "flags_raised": 0,
+          "warnings_raised": 0
+        },
+        "missing_fields": {
+          "candidates_evaluated": 100000,
+          "candidates_skipped": 0,
+          "flags_raised": 0,
+          "warnings_raised": 0
+        }
+      }
+    },
+    "stage_0b_hireability_evaluator": {
+      "duration_seconds": 12.535,
+      "candidates_evaluated": 90769
+    },
+    "stage_1_hybrid_retriever": {
+      "duration_seconds": 58.642,
+      "candidates_input": 90769,
+      "top_k_returned": 500
+    },
+    "stage_2_final_ranker": {
+      "duration_seconds": 24.688,
+      "candidates_input": 500,
+      "model": "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    },
+    "stage_3_reasoning_engine": {
+      "duration_seconds": 151.372,
+      "candidates_justified": 10,
+      "model": "Phi-3-mini-4k-instruct-q4.gguf",
+      "avg_generation_time_ms": 14808.57
+    }
+  },
+  "top_candidates": [
+    {
+      "rank": 1,
+      "candidate_id": "CAND_0039754",
+      "final_score": 0.7783,
+      "scores": {
+        "norm_semantic_score": 0.9718,
+        "availability_score": 1.0,
+        "evidence_coverage_score": 0.7671,
+        "risk_score": 0.0925
+      },
+      "components": {
+        "raw_semantic_score": -3.454183,
+        "norm_semantic_score": 0.97183,
+        "weighted_semantic": 0.388732,
+        "weighted_availability": 0.25,
+        "weighted_evidence": 0.15342,
+        "weighted_risk_penalty": 0.013875,
+        "raw_composite": 0.778277,
+        "was_clamped": false
+      },
+      "justification": {
+        "why_selected": "The candidate exhibits a strong semantic match with the role, scoring 0.9718, and full availability, indicating a perfect match for the flexible hybrid location. Evidence coverage is also high, suggesting a strong alignment with the job requirements.",
+        "risk_factors": "Minimal risk identified.",
+        "generation_time_ms": 23128.26,
+        "prompt_tokens": 587,
+        "completion_tokens": 77
+      }
+    },
+    {
+      "rank": 2,
+      "candidate_id": "CAND_0046064",
+      "final_score": 0.7399,
+      "scores": {
+        "norm_semantic_score": 0.9316,
+        "availability_score": 0.95,
+        "evidence_coverage_score": 0.7753,
+        "risk_score": 0.169
+      },
+      "components": {
+        "raw_semantic_score": -3.693259,
+        "norm_semantic_score": 0.93164,
+        "weighted_semantic": 0.372656,
+        "weighted_availability": 0.2375,
+        "weighted_evidence": 0.15506,
+        "weighted_risk_penalty": 0.02535,
+        "raw_composite": 0.739866,
+        "was_clamped": false
+      },
+      "justification": {
+        "why_selected": "The candidate exhibits a strong semantic match with the job requirements, scoring 0.9316, and high availability, with a score of 0.95, indicating a strong fit for the role.",
+        "risk_factors": "The candidate's risk score is 0.169, which is above the minimal risk threshold, suggesting there are some considerations to be aware of.",
+        "generation_time_ms": 13058.15,
+        "prompt_tokens": 588,
+        "completion_tokens": 93
+      }
+    },
+    {
+      "rank": 3,
+      "candidate_id": "CAND_0006567",
+      "final_score": 0.7377,
+      "scores": {
+        "norm_semantic_score": 0.974,
+        "availability_score": 0.875,
+        "evidence_coverage_score": 0.7586,
+        "risk_score": 0.149
+      },
+      "components": {
+        "raw_semantic_score": -3.441139,
+        "norm_semantic_score": 0.974023,
+        "weighted_semantic": 0.389609,
+        "weighted_availability": 0.21875,
+        "weighted_evidence": 0.15172,
+        "weighted_risk_penalty": 0.02235,
+        "raw_composite": 0.737729,
+        "was_clamped": false
+      },
+      "justification": {
+        "why_selected": "The candidate exhibits a strong semantic match with the job requirements, scoring 0.974, and has substantial evidence coverage with a score of 0.7586, indicating a strong alignment with the role's technical and experience demands.",
+        "risk_factors": "The candidate's risk score is 0.149, which is above the minimal risk threshold, suggesting a moderate risk that should be considered in the final decision.",
+        "generation_time_ms": 13975.71,
+        "prompt_tokens": 589,
+        "completion_tokens": 104
+      }
+    },
+    {
+      "rank": 4,
+      "candidate_id": "CAND_0077337",
+      "final_score": 0.7342,
+      "scores": {
+        "norm_semantic_score": 0.9302,
+        "availability_score": 0.925,
+        "evidence_coverage_score": 0.7646,
+        "risk_score": 0.147
+      },
+      "components": {
+        "raw_semantic_score": -3.701657,
+        "norm_semantic_score": 0.930229,
+        "weighted_semantic": 0.372091,
+        "weighted_availability": 0.23125,
+        "weighted_evidence": 0.15292,
+        "weighted_risk_penalty": 0.02205,
+        "raw_composite": 0.734211,
+        "was_clamped": false
+      },
+      "justification": {
+        "why_selected": "The candidate exhibits a strong semantic match with the job requirements, scoring 0.9302, and high availability, with a score of 0.925, indicating a strong alignment with the role's demands.",
+        "risk_factors": "The risk score is 0.147, which is above the minimal risk threshold, suggesting a moderate risk in the candidate's profile.",
+        "generation_time_ms": 13156.34,
+        "prompt_tokens": 590,
+        "completion_tokens": 96
+      }
+    },
+    {
+      "rank": 5,
+      "candidate_id": "CAND_0046525",
+      "final_score": 0.7245,
+      "scores": {
+        "norm_semantic_score": 0.9081,
+        "availability_score": 0.925,
+        "evidence_coverage_score": 0.7628,
+        "risk_score": 0.1505
+      },
+      "components": {
+        "raw_semantic_score": -3.833561,
+        "norm_semantic_score": 0.908055,
+        "weighted_semantic": 0.363222,
+        "weighted_availability": 0.23125,
+        "weighted_evidence": 0.15256,
+        "weighted_risk_penalty": 0.022575,
+        "raw_composite": 0.724457,
+        "was_clamped": false
+      },
+      "justification": {
+        "why_selected": "The candidate exhibits a strong semantic match with the job requirements, scoring 0.9081, and high availability, with a score of 0.925, indicating a strong fit for the role.",
+        "risk_factors": "The candidate's risk score is 0.1505, which suggests a moderate risk factor that should be considered in the selection process.",
+        "generation_time_ms": 12501.85,
+        "prompt_tokens": 592,
+        "completion_tokens": 92
+      }
+    },
+    {
+      "rank": 6,
+      "candidate_id": "CAND_0018499",
+      "final_score": 0.721,
+      "scores": {
+        "norm_semantic_score": 0.8705,
+        "availability_score": 1.0,
+        "evidence_coverage_score": 0.798,
+        "risk_score": 0.2455
+      },
+      "components": {
+        "raw_semantic_score": -4.056936,
+        "norm_semantic_score": 0.870504,
+        "weighted_semantic": 0.348202,
+        "weighted_availability": 0.25,
+        "weighted_evidence": 0.1596,
+        "weighted_risk_penalty": 0.036825,
+        "raw_composite": 0.720977,
+        "was_clamped": false
+      },
+      "justification": {
+        "why_selected": "The candidate exhibits a strong semantic match with the job requirements, scoring 0.8705, and has full availability, indicating a perfect match for the hybrid work model. Evidence coverage is also substantial at 0.798.",
+        "risk_factors": "The risk score is 0.2455, which suggests a moderate risk, but it is below the threshold of 0.30, indicating minimal risk.",
+        "generation_time_ms": 14529.51,
+        "prompt_tokens": 584,
+        "completion_tokens": 104
+      }
+    },
+    {
+      "rank": 7,
+      "candidate_id": "CAND_0055992",
+      "final_score": 0.7185,
+      "scores": {
+        "norm_semantic_score": 0.9391,
+        "availability_score": 0.875,
+        "evidence_coverage_score": 0.7611,
+        "risk_score": 0.1875
+      },
+      "components": {
+        "raw_semantic_score": -3.648875,
+        "norm_semantic_score": 0.939101,
+        "weighted_semantic": 0.375641,
+        "weighted_availability": 0.21875,
+        "weighted_evidence": 0.15222,
+        "weighted_risk_penalty": 0.028125,
+        "raw_composite": 0.718486,
+        "was_clamped": false
+      },
+      "justification": {
+        "why_selected": "The candidate exhibits a strong semantic match with the role, scoring 0.9391, and has a high availability score of 0.875, indicating a good fit for the hybrid work model. Evidence coverage is also substantial at 0.7611.",
+        "risk_factors": "The risk score is 0.1875, which is above the minimal risk threshold, suggesting there are some concerns to consider in the candidate's profile.",
+        "generation_time_ms": 15731.84,
+        "prompt_tokens": 592,
+        "completion_tokens": 111
+      }
+    },
+    {
+      "rank": 8,
+      "candidate_id": "CAND_0071974",
+      "final_score": 0.7157,
+      "scores": {
+        "norm_semantic_score": 0.9202,
+        "availability_score": 0.875,
+        "evidence_coverage_score": 0.7871,
+        "risk_score": 0.1905
+      },
+      "components": {
+        "raw_semantic_score": -3.761598,
+        "norm_semantic_score": 0.920152,
+        "weighted_semantic": 0.368061,
+        "weighted_availability": 0.21875,
+        "weighted_evidence": 0.15742,
+        "weighted_risk_penalty": 0.028575,
+        "raw_composite": 0.715656,
+        "was_clamped": false
+      },
+      "justification": {
+        "why_selected": "The candidate exhibits a strong semantic match with the role, scoring 0.9202, and has a high availability score of 0.875, indicating a good fit for the hybrid work model. Evidence coverage is also substantial at 0.7871.",
+        "risk_factors": "The risk score is 0.1905, which is above the minimal risk threshold, suggesting there are moderate risks to consider in this candidate's profile.",
+        "generation_time_ms": 15123.02,
+        "prompt_tokens": 592,
+        "completion_tokens": 113
+      }
+    },
+    {
+      "rank": 9,
+      "candidate_id": "CAND_0033861",
+      "final_score": 0.7008,
+      "scores": {
+        "norm_semantic_score": 1.0,
+        "availability_score": 0.85,
+        "evidence_coverage_score": 0.7696,
+        "risk_score": 0.4375
+      },
+      "components": {
+        "raw_semantic_score": -3.286611,
+        "norm_semantic_score": 1.0,
+        "weighted_semantic": 0.4,
+        "weighted_availability": 0.2125,
+        "weighted_evidence": 0.15392,
+        "weighted_risk_penalty": 0.065625,
+        "raw_composite": 0.700795,
+        "was_clamped": false
+      },
+      "justification": {
+        "why_selected": "The candidate exhibits a strong semantic match with the role, scoring a perfect 1.0, and demonstrates good availability with a score of 0.85. Evidence coverage is also solid, indicating a strong alignment with the job requirements.",
+        "risk_factors": "The risk score is 0.4375, which suggests a moderate risk, but it is below the threshold of 0.5, indicating that the risk is manageable.",
+        "generation_time_ms": 15260.88,
+        "prompt_tokens": 582,
+        "completion_tokens": 110
+      }
+    },
+    {
+      "rank": 10,
+      "candidate_id": "CAND_0053591",
+      "final_score": 0.6961,
+      "scores": {
+        "norm_semantic_score": 0.8236,
+        "availability_score": 0.925,
+        "evidence_coverage_score": 0.7715,
+        "risk_score": 0.126
+      },
+      "components": {
+        "raw_semantic_score": -4.336095,
+        "norm_semantic_score": 0.823576,
+        "weighted_semantic": 0.32943,
+        "weighted_availability": 0.23125,
+        "weighted_evidence": 0.1543,
+        "weighted_risk_penalty": 0.0189,
+        "raw_composite": 0.69608,
+        "was_clamped": false
+      },
+      "justification": {
+        "why_selected": "The candidate's strong semantic match score of 0.8236 and high availability score.",
+        "risk_factors": "Minimal risk identified.",
+        "generation_time_ms": 11620.14,
+        "prompt_tokens": 588,
+        "completion_tokens": 54
+      }
+    }
+  ],
+  "top_100_ranking": [
+    {
+      "rank": 1,
+      "candidate_id": "CAND_0039754",
+      "final_score": 0.7783
+    },
+    {
+      "rank": 2,
+      "candidate_id": "CAND_0046064",
+      "final_score": 0.7399
+    },
+    {
+      "rank": 3,
+      "candidate_id": "CAND_0006567",
+      "final_score": 0.7377
+    },
+    {
+      "rank": 4,
+      "candidate_id": "CAND_0077337",
+      "final_score": 0.7342
+    },
+    {
+      "rank": 5,
+      "candidate_id": "CAND_0046525",
+      "final_score": 0.7245
+    },
+    {
+      "rank": 6,
+      "candidate_id": "CAND_0018499",
+      "final_score": 0.721
+    },
+    {
+      "rank": 7,
+      "candidate_id": "CAND_0055992",
+      "final_score": 0.7185
+    },
+    {
+      "rank": 8,
+      "candidate_id": "CAND_0071974",
+      "final_score": 0.7157
+    },
+    {
+      "rank": 9,
+      "candidate_id": "CAND_0033861",
+      "final_score": 0.7008
+    },
+    {
+      "rank": 10,
+      "candidate_id": "CAND_0053591",
+      "final_score": 0.6961
+    },
+    {
+      "rank": 11,
+      "candidate_id": "CAND_0011687",
+      "final_score": 0.6899
+    },
+    {
+      "rank": 12,
+      "candidate_id": "CAND_0044222",
+      "final_score": 0.6839
+    },
+    {
+      "rank": 13,
+      "candidate_id": "CAND_0061257",
+      "final_score": 0.6837
+    },
+    {
+      "rank": 14,
+      "candidate_id": "CAND_0080766",
+      "final_score": 0.6833
+    },
+    {
+      "rank": 15,
+      "candidate_id": "CAND_0079387",
+      "final_score": 0.6775
+    },
+    {
+      "rank": 16,
+      "candidate_id": "CAND_0015528",
+      "final_score": 0.6727
+    },
+    {
+      "rank": 17,
+      "candidate_id": "CAND_0087744",
+      "final_score": 0.6699
+    },
+    {
+      "rank": 18,
+      "candidate_id": "CAND_0088025",
+      "final_score": 0.6678
+    },
+    {
+      "rank": 19,
+      "candidate_id": "CAND_0068811",
+      "final_score": 0.6676
+    },
+    {
+      "rank": 20,
+      "candidate_id": "CAND_0093331",
+      "final_score": 0.6563
+    },
+    {
+      "rank": 21,
+      "candidate_id": "CAND_0094759",
+      "final_score": 0.6521
+    },
+    {
+      "rank": 22,
+      "candidate_id": "CAND_0008425",
+      "final_score": 0.6519
+    },
+    {
+      "rank": 23,
+      "candidate_id": "CAND_0091534",
+      "final_score": 0.647
+    },
+    {
+      "rank": 24,
+      "candidate_id": "CAND_0093193",
+      "final_score": 0.6447
+    },
+    {
+      "rank": 25,
+      "candidate_id": "CAND_0060054",
+      "final_score": 0.6447
+    },
+    {
+      "rank": 26,
+      "candidate_id": "CAND_0058412",
+      "final_score": 0.6444
+    },
+    {
+      "rank": 27,
+      "candidate_id": "CAND_0040310",
+      "final_score": 0.6366
+    },
+    {
+      "rank": 28,
+      "candidate_id": "CAND_0050454",
+      "final_score": 0.6286
+    },
+    {
+      "rank": 29,
+      "candidate_id": "CAND_0008295",
+      "final_score": 0.6269
+    },
+    {
+      "rank": 30,
+      "candidate_id": "CAND_0088378",
+      "final_score": 0.6235
+    },
+    {
+      "rank": 31,
+      "candidate_id": "CAND_0058688",
+      "final_score": 0.6227
+    },
+    {
+      "rank": 32,
+      "candidate_id": "CAND_0071880",
+      "final_score": 0.6216
+    },
+    {
+      "rank": 33,
+      "candidate_id": "CAND_0062247",
+      "final_score": 0.6144
+    },
+    {
+      "rank": 34,
+      "candidate_id": "CAND_0015581",
+      "final_score": 0.6125
+    },
+    {
+      "rank": 35,
+      "candidate_id": "CAND_0081709",
+      "final_score": 0.6102
+    },
+    {
+      "rank": 36,
+      "candidate_id": "CAND_0087630",
+      "final_score": 0.6095
+    },
+    {
+      "rank": 37,
+      "candidate_id": "CAND_0095619",
+      "final_score": 0.6083
+    },
+    {
+      "rank": 38,
+      "candidate_id": "CAND_0011432",
+      "final_score": 0.6078
+    },
+    {
+      "rank": 39,
+      "candidate_id": "CAND_0029117",
+      "final_score": 0.6067
+    },
+    {
+      "rank": 40,
+      "candidate_id": "CAND_0055905",
+      "final_score": 0.6006
+    },
+    {
+      "rank": 41,
+      "candidate_id": "CAND_0030953",
+      "final_score": 0.5982
+    },
+    {
+      "rank": 42,
+      "candidate_id": "CAND_0037980",
+      "final_score": 0.5965
+    },
+    {
+      "rank": 43,
+      "candidate_id": "CAND_0044855",
+      "final_score": 0.5923
+    },
+    {
+      "rank": 44,
+      "candidate_id": "CAND_0046132",
+      "final_score": 0.5907
+    },
+    {
+      "rank": 45,
+      "candidate_id": "CAND_0052682",
+      "final_score": 0.588
+    },
+    {
+      "rank": 46,
+      "candidate_id": "CAND_0010770",
+      "final_score": 0.5867
+    },
+    {
+      "rank": 47,
+      "candidate_id": "CAND_0048862",
+      "final_score": 0.5846
+    },
+    {
+      "rank": 48,
+      "candidate_id": "CAND_0081852",
+      "final_score": 0.5838
+    },
+    {
+      "rank": 49,
+      "candidate_id": "CAND_0005649",
+      "final_score": 0.5828
+    },
+    {
+      "rank": 50,
+      "candidate_id": "CAND_0064888",
+      "final_score": 0.5785
+    },
+    {
+      "rank": 51,
+      "candidate_id": "CAND_0061265",
+      "final_score": 0.5771
+    },
+    {
+      "rank": 52,
+      "candidate_id": "CAND_0047721",
+      "final_score": 0.577
+    },
+    {
+      "rank": 53,
+      "candidate_id": "CAND_0043228",
+      "final_score": 0.5769
+    },
+    {
+      "rank": 54,
+      "candidate_id": "CAND_0092692",
+      "final_score": 0.5769
+    },
+    {
+      "rank": 55,
+      "candidate_id": "CAND_0052706",
+      "final_score": 0.5755
+    },
+    {
+      "rank": 56,
+      "candidate_id": "CAND_0033842",
+      "final_score": 0.5741
+    },
+    {
+      "rank": 57,
+      "candidate_id": "CAND_0069905",
+      "final_score": 0.5734
+    },
+    {
+      "rank": 58,
+      "candidate_id": "CAND_0064326",
+      "final_score": 0.5722
+    },
+    {
+      "rank": 59,
+      "candidate_id": "CAND_0029135",
+      "final_score": 0.5721
+    },
+    {
+      "rank": 60,
+      "candidate_id": "CAND_0082973",
+      "final_score": 0.5701
+    },
+    {
+      "rank": 61,
+      "candidate_id": "CAND_0017090",
+      "final_score": 0.5695
+    },
+    {
+      "rank": 62,
+      "candidate_id": "CAND_0065786",
+      "final_score": 0.5687
+    },
+    {
+      "rank": 63,
+      "candidate_id": "CAND_0055960",
+      "final_score": 0.5683
+    },
+    {
+      "rank": 64,
+      "candidate_id": "CAND_0061696",
+      "final_score": 0.5674
+    },
+    {
+      "rank": 65,
+      "candidate_id": "CAND_0094685",
+      "final_score": 0.5672
+    },
+    {
+      "rank": 66,
+      "candidate_id": "CAND_0088441",
+      "final_score": 0.5658
+    },
+    {
+      "rank": 67,
+      "candidate_id": "CAND_0018549",
+      "final_score": 0.5655
+    },
+    {
+      "rank": 68,
+      "candidate_id": "CAND_0051466",
+      "final_score": 0.5645
+    },
+    {
+      "rank": 69,
+      "candidate_id": "CAND_0010257",
+      "final_score": 0.5611
+    },
+    {
+      "rank": 70,
+      "candidate_id": "CAND_0075249",
+      "final_score": 0.5609
+    },
+    {
+      "rank": 71,
+      "candidate_id": "CAND_0014440",
+      "final_score": 0.5551
+    },
+    {
+      "rank": 72,
+      "candidate_id": "CAND_0045250",
+      "final_score": 0.5518
+    },
+    {
+      "rank": 73,
+      "candidate_id": "CAND_0093883",
+      "final_score": 0.5512
+    },
+    {
+      "rank": 74,
+      "candidate_id": "CAND_0098846",
+      "final_score": 0.5511
+    },
+    {
+      "rank": 75,
+      "candidate_id": "CAND_0022415",
+      "final_score": 0.5502
+    },
+    {
+      "rank": 76,
+      "candidate_id": "CAND_0065878",
+      "final_score": 0.548
+    },
+    {
+      "rank": 77,
+      "candidate_id": "CAND_0080794",
+      "final_score": 0.5468
+    },
+    {
+      "rank": 78,
+      "candidate_id": "CAND_0041669",
+      "final_score": 0.5465
+    },
+    {
+      "rank": 79,
+      "candidate_id": "CAND_0017590",
+      "final_score": 0.5464
+    },
+    {
+      "rank": 80,
+      "candidate_id": "CAND_0013456",
+      "final_score": 0.5463
+    },
+    {
+      "rank": 81,
+      "candidate_id": "CAND_0070514",
+      "final_score": 0.5456
+    },
+    {
+      "rank": 82,
+      "candidate_id": "CAND_0037566",
+      "final_score": 0.5436
+    },
+    {
+      "rank": 83,
+      "candidate_id": "CAND_0068985",
+      "final_score": 0.5412
+    },
+    {
+      "rank": 84,
+      "candidate_id": "CAND_0004112",
+      "final_score": 0.5396
+    },
+    {
+      "rank": 85,
+      "candidate_id": "CAND_0076251",
+      "final_score": 0.5391
+    },
+    {
+      "rank": 86,
+      "candidate_id": "CAND_0091909",
+      "final_score": 0.5385
+    },
+    {
+      "rank": 87,
+      "candidate_id": "CAND_0000273",
+      "final_score": 0.5369
+    },
+    {
+      "rank": 88,
+      "candidate_id": "CAND_0051841",
+      "final_score": 0.5365
+    },
+    {
+      "rank": 89,
+      "candidate_id": "CAND_0076163",
+      "final_score": 0.5332
+    },
+    {
+      "rank": 90,
+      "candidate_id": "CAND_0093763",
+      "final_score": 0.5324
+    },
+    {
+      "rank": 91,
+      "candidate_id": "CAND_0041402",
+      "final_score": 0.5324
+    },
+    {
+      "rank": 92,
+      "candidate_id": "CAND_0095528",
+      "final_score": 0.5323
+    },
+    {
+      "rank": 93,
+      "candidate_id": "CAND_0089444",
+      "final_score": 0.5312
+    },
+    {
+      "rank": 94,
+      "candidate_id": "CAND_0012798",
+      "final_score": 0.5298
+    },
+    {
+      "rank": 95,
+      "candidate_id": "CAND_0042100",
+      "final_score": 0.5296
+    },
+    {
+      "rank": 96,
+      "candidate_id": "CAND_0020494",
+      "final_score": 0.5296
+    },
+    {
+      "rank": 97,
+      "candidate_id": "CAND_0045613",
+      "final_score": 0.5292
+    },
+    {
+      "rank": 98,
+      "candidate_id": "CAND_0041696",
+      "final_score": 0.529
+    },
+    {
+      "rank": 99,
+      "candidate_id": "CAND_0021885",
+      "final_score": 0.5285
+    },
+    {
+      "rank": 100,
+      "candidate_id": "CAND_0092278",
+      "final_score": 0.5282
+    }
+  ]
+}

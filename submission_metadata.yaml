@@ -1,0 +1,67 @@
+# ──────────────────────────────────────────────────────────────
+# INDIA.RUNS Data & AI Challenge — Submission Metadata
+# ──────────────────────────────────────────────────────────────
+
+team_name: "AlgoRhythms"
+
+team_members:
+  - name: "THEJAS J"
+    role: "AI/ML Engineer & System Architect — Led the project, designed the end-to-end ranking pipeline, integrated the retrieval, ranking, reasoning, and validation stages, coordinated development, testing, optimization, and final submission."
+  - name: "Veekshith"
+    role: "Backend & Infrastructure Engineer — Assisted with backend implementation, pipeline integration, repository management, and deployment support."
+  - name: "Abhijith"
+    role: "Research & Quality Assurance Engineer — Assisted with experimentation, documentation, testing, and presentation preparation while validating outputs and overall system quality."
+  - name: "raghavendra"
+    role: "Data Engineering & Validation Engineer — Worked on data preprocessing, validation, testing, debugging, and ensuring submission correctness."
+
+primary_contact:
+  name: "THEJAS J"
+  email: "thejasbejja42@gmail.com"
+
+repository: "https://github.com/thejas-tech-hub/India_runs_hackathon.git"
+
+compute_environment:
+  hardware: "CPU-only (no GPU)"
+  ram: "16 GB"
+  os: "Windows"
+  python_version: "3.10+"
+  runtime_seconds: 254
+  gpu_used: false
+  external_apis_used: false
+  internet_required: false
+
+ai_tools_used:
+  - tool: "sentence-transformers/all-MiniLM-L6-v2"
+    purpose: "Dense embeddings for hybrid retrieval (Stage 1)"
+  - tool: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    purpose: "Cross-encoder re-ranking (Stage 2)"
+  - tool: "Phi-3-mini-4k-instruct-q4.gguf"
+    purpose: "Local LLM for structured justification generation (Stage 3)"
+  - tool: "faiss-cpu"
+    purpose: "Approximate nearest neighbor search for dense retrieval"
+  - tool: "rank-bm25"
+    purpose: "BM25 lexical retrieval"
+  - tool: "llama-cpp-python"
+    purpose: "GGUF model inference on CPU"
+
+methodology_summary: |
+  Five-stage pipeline processing 100K candidates against a Job Description:
+  
+  1. IntegrityFilter — Detects and removes honeypot/synthetic candidates
+     using skill-duration anomalies, career consistency, and field validation.
+     Removed ~9.2% of candidates as honeypots.
+  
+  2. HireabilityEvaluator — Computes three behavioral scores (Availability,
+     Evidence Coverage, Risk) for each clean candidate.
+  
+  3. HybridRetriever — BM25 lexical search + dense embeddings (all-MiniLM-L6-v2)
+     fused via Reciprocal Rank Fusion (k=60) to retrieve Top 500 candidates.
+  
+  4. FinalRanker — Cross-encoder (ms-marco-MiniLM-L-6-v2) re-ranking fused
+     with behavioral scores using weighted composite formula:
+     Final = 0.4*Semantic + 0.25*Availability + 0.2*Evidence - 0.15*Risk
+  
+  5. ReasoningEngine — Phi-3-mini (Q4 quantized, CPU-only) generates structured
+     JSON justifications for Top 10 candidates using GBNF grammar enforcement.
+  
+  All processing is CPU-only, fully offline, and completes in ~254 seconds.

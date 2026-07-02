@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+.tox/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large data files (do not commit)
+*.jsonl
+*.jsonl.gz
+*.npy
+*.index
+*.gguf
+
+# Generated outputs (not needed in repo)
+submission.xlsx
+sample_report.json
+
+# XLSX generator (utility, not part of core pipeline)
+generate_submission.py
